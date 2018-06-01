@@ -55,7 +55,7 @@ class ChartDataSetConfigUtils: NSObject {
                 customFormatter.positiveFormat = config["valueFormatter"].stringValue
                 customFormatter.negativeFormat = config["valueFormatter"].stringValue
                 
-                dataSet.valueFormatter = DefaultValueFormatter(formatter: customFormatter);
+                dataSet.valueFormatter = CustomValueFormatter(formatter: customFormatter);
             }
             
         }
