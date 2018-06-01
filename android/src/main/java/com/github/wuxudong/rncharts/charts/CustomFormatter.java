@@ -18,11 +18,14 @@ public class CustomFormatter implements IAxisValueFormatter, IValueFormatter {
 
     @Override
     public String getFormattedValue(float value, AxisBase yAxis) {
-        return mFormat.format(value);
+        String result = value != 0.0f ? mFormat.format(value) : " ";
+        return result;
     }
 
     @Override
     public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
-        return mFormat.format(value);
+        String result = value != 0.0f ? mFormat.format(value) : " ";
+        String a = result;
+        return result;
     }
 }
