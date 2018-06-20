@@ -56,6 +56,8 @@ public class ChartDataSetConfigUtils {
                 dataSet.setValueFormatter(new LargeValueFormatter());
             } else if ("percent".equals(valueFormatter)) {
                 dataSet.setValueFormatter(new PercentFormatter());
+            } else if ("floatValue".equals(valueFormatter)) { 
+                axis.setValueFormatter(new FloatFormatter(valueFormatter));
             } else {
                 dataSet.setValueFormatter(new CustomFormatter(valueFormatter));
             }
