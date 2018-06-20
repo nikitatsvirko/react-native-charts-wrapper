@@ -12,7 +12,7 @@ public class FloatFormatter implements IAxisValueFormatter, IValueFormatter {
 
     private DecimalFormat mFormat;
 
-    public CustomFormatter(String value) {
+    public FloatFormatter(String value) {
         mFormat = new DecimalFormat(value);
     }
 
