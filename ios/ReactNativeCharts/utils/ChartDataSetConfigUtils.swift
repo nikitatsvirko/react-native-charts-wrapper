@@ -50,6 +50,12 @@ class ChartDataSetConfigUtils: NSObject {
                 percentFormatter.numberStyle = .percent
                 
                 dataSet.valueFormatter = DefaultValueFormatter(formatter: percentFormatter);
+            } else if "floatValue" == config["valueFormatter"].stringValue {
+                let customFormatter = NumberFormatter()
+                customFormatter.positiveFormat = config["valueFormatter"].stringValue
+                customFormatter.negativeFormat = config["valueFormatter"].stringValue
+                
+                dataSet.valueFormatter = FloatValueFormatter(formatter: customFormatter);
             } else {
                 let customFormatter = NumberFormatter()
                 customFormatter.positiveFormat = config["valueFormatter"].stringValue
